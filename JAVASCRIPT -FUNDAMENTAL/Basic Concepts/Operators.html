@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JavaScript Operators</title>
+</head>
+
+<body>
+    <h1>JavaScript Operators</h1>
+
+    <h2>
+        What are JavaScript Operators?
+    </h2>
+    <ul style="width: 45%; font-family: sans-serif;font-weight: 500px;">
+        <li>JavaScript operators are special symbols used in scripts to perform operations on operands,
+            such as arithmetic calculations, logical comparisons, or value assignments. It plays a crucial
+            role in controlling the flow and processing of data within the language. </li>
+    </ul>
+    <script>
+        // Arithmetic Operators
+        let a = 10;
+        let b = 5;
+        console.log("Addition: " + (a + b)); // 15
+        console.log("Subtraction: " + (a - b)); // 5
+        console.log("Multiplication: " + (a * b)); // 50
+        console.log("Division: " + (a / b)); // 2
+        console.log("Modulus: " + (a % b)); // 0
+
+        // Assignment Operators
+        let c = 20;
+        c += 10; // c = c + 10
+        console.log("Assignment (+=): " + c); // 30
+
+        // Comparison Operators
+        console.log("Equal: " + (a == b)); // false
+        console.log("Not Equal: " + (a != b)); // true
+        console.log("Strict Equal: " + (a === b)); // false
+        console.log("Greater Than: " + (a > b)); // true
+
+        // Logical Operators
+        console.log("Logical AND: " + (a > 5 && b < 10)); // true
+        console.log("Logical OR: " + (a > 15 || b < 10)); // true
+        console.log("Logical NOT: " + !(a > 15)); // true
+
+        // Increment and Decrement Operators
+        let d = 5;
+        console.log("Increment: " + (++d)); // 6
+        console.log("Decrement: " + (--d)); // 5
+    </script>
+</body>
+
+</html>

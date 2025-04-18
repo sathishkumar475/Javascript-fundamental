@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <h2>Promise</h2>
+</body>
+
+<script>
+    // function mockApiCall(data, successRate = 0.98, maxLatencyMs = 1000) {
+    //     return new Promise((resolve, reject) => {
+    //         const successRoll = Math.random();
+    //         const latency = Math.floor(Math.random() * (maxLatencyMs + 1));
+    //         if (successRoll <= successRate) {
+    //             setTimeout(() => resolve(data), latency);
+    //         } else {
+    //             setTimeout(() => reject('API failed to return data'), latency);
+    //         }
+    //     });
+    // }
+
+    // // Usage
+    // mockApiCall({ id: 1, name: 'Sample Data' })
+    //     .then((response) => {
+    //         console.log('Data received:', response);
+    //     })
+    //     .catch((error) => {
+    //         console.error('Error:', error);
+    //     });
+
+    // //Handling User Authentication
+
+    // function loginUser(credentials) {
+    //     return new Promise((resolve, reject) => {
+    //         // Simulate an API call
+    //         setTimeout(() => {
+    //             if (credentials.username === 'admin' && credentials.password === 'password') {
+    //                 resolve('Login successful');
+    //             } else {
+    //                 reject('Invalid credentials');
+    //             }
+    //         }, 1000);
+    //     });
+    // }
+
+    // loginUser({ username: 'admin', password: 'password' })
+    //     .then(message => {
+    //         console.log(message);
+    //     })
+    //     .catch(error => {
+    //         console.error(error);
+    //     });
+
+
+
+    // function Walkroud(callback) {
+    //     setTimeout(() => {
+    //         console.log(" This is walk round");
+    //         callback();
+
+    //     }, 3000)
+    // }
+
+    // function wallin(callback) {
+    //     setTimeout(() => {
+    //         console.log(" This our company wallkin ");
+    //         callback();
+    //     }, 2000)
+
+    // }
+
+    // function sucesss(callback) {
+    //     setTimeout(() => {
+    //         console.log("Company interviwe suceess");
+    //         callback();
+    //     }, 1500)
+    // }
+
+
+    // Walkroud(() => {
+    //     wallin(() => {
+    //         sucesss(() => {
+
+    //             console.log(" When did you joing our company ");
+
+    //         })
+    //     })
+    // })
+
+    ///call back next promiss used 
+
+    /// without if else used //.
+    function hiring() {
+        return new Promise((resolve, rejected) => {
+            setTimeout(() => {
+                resolve(" this chola hiring process");
+
+            }, 3000);
+        });
+    }
+
+
+    function interviwe() {
+        return new Promise((resolve, rejected) => {
+            setTimeout(() => {
+                resolve("this chola interviwe proceess")
+
+            }, 2000);
+        })
+    }
+
+    function shortlist() {
+        return new Promise((resolve, rejected) => {
+            setTimeout(() => {
+                resolve("our company shorlist ");
+            }, 1500)
+        })
+    }
+    hiring().then(value => { console.log(value); return interviwe() })
+        .then(value => { console.log(value); return shortlist() })
+        .then(value => { console.log(value); console.log(" sathish congratulation you are selected") });
+
+    //with if else used 
+
+
+
+</script>
+
+</html>

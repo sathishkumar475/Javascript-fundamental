@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>js loops</title>
+</head>
+
+<body>
+    <h1>Javascript loop method</h1>
+    <h2>
+
+        In JavaScript, a loop is a programming construct that lets you execute a block of code repeatedly based on a
+        condition. Loops are essential for iterating through data, performing repetitive tasks, and reducing code
+        redundancy.
+    </h2>
+
+    <div id=" result"></div>
+    <script>
+        //FOR LOOP  ( value )  for ( intialexpression, condition,step){
+        //  console.log
+        //        }
+        for (let i = 0; i <= 5; i++) {                  //condition i <5; = value =1,2,3,4   (this diff between condition)
+            console.log("value" + i)                    // condition i <=5; = value =1,2,3,4,5
+        }
+        //
+        for (let i = 0; i <= 5; i++) {   //odd number 
+
+            if (i % 2 !== 0) {
+                console.log(" this is odd number" + i)
+
+
+            }
+
+        }
+
+        for (let i = 10; i <= 1; i--) {   //odd number 
+
+            if (i % 0 !== 0) {
+                console.log(" this is odd number" + i)
+
+
+            }
+
+        }
+        //while loop statement 
+
+        let i = 5;
+
+        while (i >= 1) {
+            console.log(i);
+            i--
+
+
+        }
+
+        //do-while loop statement
+
+        let x = 10;
+        do {
+            console.log(x);
+            x--;
+        }
+        while (x >= 1);
+        //Breaking out of loop
+
+
+
+        let X;
+        for (x = 1; x <= 10; x++) {
+            console.log(x)
+            if (x == 5)
+                break
+        }
+
+
+        const person = {
+            fistName: 'sathish',
+            lastName: 'kumar',
+            age: 23,
+            inalive: true,
+            fullName: function () {
+                console.log(this.fistName);
+            }
+
+        }
+
+        document.getElementById("result").innerHTML = person
+        console.log(person.fistName);
+
+
+    </script>
+</body>
+
+</html>

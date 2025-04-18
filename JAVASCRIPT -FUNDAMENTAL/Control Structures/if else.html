@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>If Else Statement in JavaScript</title>
+</head>
+
+<body>
+
+
+
+    <h1 id=" demo">If Else Statement Example</h1>
+
+    <button onclick="myfunction()">click</button>
+    <script>
+        let number = 10;
+
+        if (number > 0) {
+            console.log("The number is positive.");
+        } else if (number < 0) {
+            console.log("The number is negative.");
+        } else {
+            console.log("The number is zero.");
+        }
+        // Nested if else statement 
+        let lang = prompt(" enter the total mark ")
+
+        function myfunction(lang) {
+            let Tamil = 65, English = 88, Maths = 35, Science = 65;
+            let total, avg;
+            total = Tamil + English + Maths + Science;
+            avg = total / 4;
+            console.log(" Total  : ", total);
+            console.log("Average :", avg);
+
+            if (Tamil >= 35 && English >= 35 && Maths >= 35 && Science >= 35) {
+             
+                console.log(" Result : Pass ");
+
+                if (avg > 90 && avg <= 100) {
+                    console.log(" Grade  : A");
+
+                }
+                else if (avg > 80 && avg <= 70) {
+                    console.log(" Grade  : B");
+
+                }
+                else if (avg > 70 && avg <= 60) {
+                    console.log(" Grade : C");
+
+                }
+                else {
+                    console.log(" Grade : D");
+
+                }
+            }
+            else {
+                console.log(" Result : Fail");
+                console.log(" Grade  : No Grade ");
+
+            }
+
+            document.getElementById(" demo").innerHTML = myfunction(lang);
+        }
+
+    </script>
+    </script>
+</body>
+
+</html>

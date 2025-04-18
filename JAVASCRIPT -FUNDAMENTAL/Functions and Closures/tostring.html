@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Stiring methoed </title>
+</head>
+
+<body>
+    <script>
+        function Book(title, author, year) {
+            this.title = title;
+            this.author = author;
+            this.year = year;
+        }
+
+        Book.prototype.toString = function () {
+            return `${this.title} by ${this.author} (${this.year})`;
+        };
+
+        const book1 = new Book("The Hitchhiker's Guide to the Galaxy", "Douglas Adams", 1979);
+        const book2 = new Book("Pride and Prejudice", "Jane Austen", 1813);
+
+        console.log(book1.toString()); // Output: The Hitchhiker's Guide to the Galaxy by Douglas Adams (1979)
+        console.log(book2.toString()); // Output: Pride and Prejudice by Jane Austen (1813)
+
+        // Using toString() implicitly in string concatenation
+        console.log("Book details: " + book1); // Output: Book details: The Hitchhiker's Guide to the Galaxy by Douglas Adams (1979)
+
+
+
+        let sub1 = " String is a sequence of characters,";
+        let sub2 = "  example of writing a method,";
+
+
+        // console.log(sub1 + sub2);     ///addition 
+        // console.log(sub1.concat(" sathish ** ", sub2));  //concat
+        // console.log(sub1.slice(1, 6));  //slice
+        // console.log(sub1.slice(7));   /// slice example  ( possitive )
+        // console.log(sub2.slice(-2));  ///slice exmpmple (negative )
+        // console.log(sub1.substring(1, 6));  //substring 
+        // console.log(sub1.substr(1, 6));   //substr
+        // console.log(sub1.replace(" is ", " learing  "));  //replace 
+        // console.log(sub1.toUpperCase());  //CAPITALIZE LETTERS
+        // console.log(sub1.toLowerCase());  // small letters 
+        // console.log(sub1.charAt(1));    //CharAt
+        // console.log((sub1.length));    ///length 
+        // console.log(sub1.trim());     // trim extra space remove 
+        // console.log(sub1.trimStart());  // first spece remove 
+        // console.log(sub1.trimEnd());// last spece remove 
+        // let name = " sathish"
+        // console.log(name.charAt(1).toUpperCase());   //first letter 
+
+//         let items = 5;
+//         let price = 95;
+
+//         console.log(`  You have  ${items} in you cart
+// Your bill amount is ${price}  `);
+
+
+
+
+
+
+    </script>
+</body>
+
+</html>

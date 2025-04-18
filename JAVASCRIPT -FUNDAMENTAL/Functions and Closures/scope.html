@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Scope in JavaScript</title>
+</head>
+<body>
+    <h1>Understanding Scope in JavaScript</h1>
+    <script>
+        // Global Scope
+        let globalVar = "I am a global variable";
+
+        function outerFunction() {
+            // Function Scope
+            let outerVar = "I am a variable in the outer function";
+
+            function innerFunction() {
+                // Inner Function Scope
+                let innerVar = "I am a variable in the inner function";
+
+                console.log(globalVar); // Accessible
+                console.log(outerVar);  // Accessible
+                console.log(innerVar);  // Accessible
+            }
+
+            innerFunction();
+
+            // console.log(innerVar); // Unaccessible, will throw an error
+        }
+
+        outerFunction();
+
+        // console.log(outerVar); // Unaccessible, will throw an error
+    </script>
+</body>
+</html>

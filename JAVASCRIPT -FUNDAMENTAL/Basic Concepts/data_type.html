@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <h1>What is meant by data type?.</h1>
+
+    <p style=" width: 45%; ">A data type is an attribute associated with a piece of data that tells a
+        computer system how to interpret its
+        value. Understanding data types ensures that data is collected in the preferred format and the value of each
+        property is as expected.</p>
+    <h2 id="demo">Data type</h2>
+    <h3>
+        let num = 42; // Number <br>
+        let str = "JavaScript"; // String <br>
+        let isCool = true; // Boolean <br>
+        let notAssigned; // Undefined <br>
+        let emptyValue = null; // Null <br>
+        let uniqueKey = Symbol(); // Symbol <br>
+        let largeNum = 9007199254740991n; // BigInt
+    </h3>
+    <p>
+    <ul style="width: 45%;">
+        <li>Number: For any numeric value (e.g., 5, 3.14, -42).
+
+        </li>
+        <li>String: For text (e.g., "Hello", 'World').</li>
+        <li>Boolean: For true/false values (e.g., true, false).</li>
+        <li>Undefined: When a variable is declared but not assigned a value (e.g., let x;).</li>
+        <li>Null: Represents an empty or non-existent value (e.g., let y = null;).</li>
+        <li>Symbol: A unique and immutable value often used as object keys (e.g., Symbol("id")).</li>
+        <li>BigInt: For very large integers beyond the limit of the Number type (e.g., 123n).</li>
+    </ul>
+    </p>
+    <script>
+        /*String
+       Number   eg:  1.25,25
+       Boolean  eg:  True,False
+       Null
+       Undefinded 
+       Symbols  E6 */
+
+
+
+
+        // Primitive
+        function myfunction() {
+            let num = 42;              // Number
+            let str = "JavaScript";    // String
+            let isCool = true;         // Boolean
+            let notAssigned;           // Undefined
+            let emptyValue = null;     // Null
+            let uniqueKey = Symbol();  // Symbol
+            let largeNum = 9007199254740991n; // BigInt
+
+
+        }
+
+        //        document.getElementById("demo").innerHTML = myfunction()
+        // Non-Primitive
+        let obj = { key: "value" }; // Object
+        let arr = [1, 2, 3];        // Array
+        let func = () => "Hi";      // Function
+
+        //below code is to check the data type of the variable
+        var a = 25.5;
+        console.log(typeof a);
+
+        var name = " Sathish.E kumar ";
+        console.log(typeof name);
+
+        var ismarried = true;
+        console.log(typeof ismarried);
+        var phone = null;
+        console.log(typeof phone);
+        var b;
+        console.log(typeof b)
+
+        let x = 10;    // x is a Number
+        x = "Hello";   // Now x is a String
+
+        console.log(x);
+    </script>
+</body>
+
+</html>

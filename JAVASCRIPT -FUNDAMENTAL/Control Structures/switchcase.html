@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>switch </title>
+</head>
+
+<body>
+    <h2 style="text-align: center; color: aqua; background-color: rgb(193, 148, 148); font-size: 100px;">SWITCH
+        STATEMENT</h2>
+    <p id="demo"></p>
+
+    <button onclick=" displaymessage()"> click days</button>
+</body>
+<script>
+
+    let lang = prompt(" enter the day : ")
+    function displaymessage(lang) {
+
+
+        let day = 9;
+
+        switch (day) {
+            case 1:
+                console.log(" This Monday");
+                break;
+            case 2:
+                console.log(" This Tuesday");
+                break;
+            case 3:
+                console.log(" This Weadnesday ");
+                break;
+            case 4:
+                console.log(" This Thursday ");
+                break;
+            case 5:
+                console.log(" This friday");
+                break;
+
+            default:
+                console.log(" No day ");
+                break;
+        }
+
+        document.getElementById(" demo").innerHTML = displaymessage(lang);
+    }
+</script>
+
+</html>

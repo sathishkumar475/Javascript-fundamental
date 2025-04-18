@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <h2>
+        Promise IF ELSE used
+    </h2>
+
+</body>
+
+
+<script>
+
+    function hiring() {
+        return new Promise((resolve, reject) => {
+            setTimeout(() => {
+                const wallin = false
+                if (wallin) {
+                    resolve("you are hired");
+                }
+
+                else {
+                    reject("you are not hired");
+                }
+            }, 3000)
+        });
+    }
+    function interviwe() {
+        return new Promise((resolve, reject) => {
+            setTimeout(() => {
+                const procee = true;
+                if (procee) {
+                    resolve("process is done");
+                }
+                else {
+                    reject("process is not done");
+                }
+            }, 2000)
+        })
+    }
+
+    function shortlist() {
+        return new Promise((resolve, reject) => {
+            setTimeout(() => {
+                const waiting = true;
+                if (waiting) {
+                    resolve("you are shorlisted");
+                }
+                else {
+                    reject("you are not shortlisted");
+                }
+            }, 1500);
+        })
+    }
+
+    hiring().then(value => { console.log(value); return interviwe() })
+        .then(value => { console.log(value); return shortlist() })
+        .then(value => { console.log(value); console.log("you are suceess"); })
+        .catch(error => console.error(error))
+        
+
+
+
+
+</script>
+
+</html>

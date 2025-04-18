@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        <!-- 
+
+// You said
+// Defining and invoking functions please explain >,
+// Copilot said
+// Defining and invoking functions in JavaScript is an essential concept for writing reusable and organized code. Here's an explanation with examples:
+
+// 1. Defining a Function
+// A function is a block of reusable code designed to perform a specific task. In JavaScript, functions can be defined in several ways:
+
+// a. Function Declaration:
+// javascript
+
+Copy -->
+        function greet(name) {
+
+            return
+            " Hello, " + name + " !";
+        }
+
+    // < !--The function keyword is followed by the function's name (greet), a set of // parentheses(which can include //
+   //     parameters like name), and a block of code inside curly braces { }.b.Function // Expression: javascript Copy-->
+
+        const greet = function (name) { return "Hello, " + name + "!"; };
+
+        // Here, a function is
+        // assigned to a variable(greet).This is called a function expression.c.Arrow Function(ES6): javascript Copy
+
+        const greet = (name) => {
+            return "Hello, " + name + "!";
+        };
+        // For concise functions, the curly braces and return keyword can be omitted:
+
+        // javascript
+
+        // Copy
+        const greet = name => "Hello, " + name + "!";
+        // 2. Invoking(Calling) a Function
+        // Once a function is defined, you can invoke it to execute the code inside it.Here’s how:
+
+        // Example:
+        // javascript
+
+        Copy
+        console.log(greet("Sathish")); // Output: "Hello, Sathish!"
+        // The function greet is invoked with the argument "Sathish".The value of the argument replaces the parameter
+        name
+        // inside the function.
+
+        // 3. Function with No Parameters
+        // Functions don’t always need parameters.Here’s an example:
+
+        // javascript
+
+        // Copy-- >
+        function sayHello() {
+            return "Hello, World!";
+        }
+
+        console.log(sayHello()); // Output: "Hello, World!"
+        // < !--4. Function with Multiple Parameters A function can take more than one parameter: javascript Copy-->
+        function add(a, b) {
+            return a + b;
+        }
+
+        console.log(add(5, 3)); // Output: 8
+        // < !--5. Default Parameters You can set default values for parameters: javascript Copy-->
+        function greet(name = "Guest") {
+            return "Hello, " + name + "!";
+        }
+
+        console.log(greet()); // Output: "Hello, Guest!"
+        // // // < !--Why Functions Are Useful: Reusability: Write the logic once and use it multiple // // //
+        // times.Modularity: // Break large tasks into smaller, manageable pieces.Readability: Makes code //
+        // // easier to understand and // maintain.Let me know if you’d like an example with a specific
+        // context // or // // // further details on advanced // topics like recursion or higher - order
+        // functions! Can // you // explain // recursion with examples ? How are // functions used in web
+        // development ? What are // the // differences // between function declarations and // expressions ?
+        //             Message Copilot-- >
+        // // //
+    </script>
+</body>
+
+</html>
