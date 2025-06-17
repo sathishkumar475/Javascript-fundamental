@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+</body>
+
+<script>
+    const products = [
+        { name: "Phone", price: 500 },
+        { name: "Laptop", price: 1500 }
+    ];
+ 
+    const displayItems = products.map(item => `${item.name} - ₹${item.price}`);
+    const budgetItems = products.filter(item => item.price <= 1000);
+    const total = products.reduce((sum, item) => sum + item.price, 0);
+
+    console.log("All Products:", displayItems);
+    console.log("Budget Products (<= ₹1000):", budgetItems.map(item => item.name));
+    console.log("Total Price:", total);
+</script>
+
+</html>

@@ -4,16 +4,39 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Spread and Rest Operators</title>
 </head>
 
 <body>
-    <script>
-        const arr1 = [1, 2, 3];
-        const arr2 = [...arr1]; // Creates a shallow copy
-        console.log(arr2); // [1, 2, 3]
+    <h1i id="output">Spread and Rest Operators in JavaScript</h1>
+        <script>
+            // Spread Operator Example
+            const breakfast = ["bread ", "egg", "milk "];
+            const lunch = ["rice ,dal", "salad"];
+            const dinner = ["sapththi ", "kuruma"]
+            const issummer = true;
+            const foods =
+                [...breakfast, "tea", ...lunch, ... (issummer ? [' watermelon '] : ['']), ...dinner]
+            console.log(foods);
 
-    </script>
+            document.getElementById('output').innerHTML = foods;
+            // /// spread operator with object letteral
+
+
+            // const person = {
+            //     name: "sathish",
+            //     age: 23,
+
+            // }
+            
+            // const address = {
+            //     city: "chennai",
+            //     state: "tamilnadu",
+            // }
+            // const persondetails = { ...person, ...address, age: 25, }
+            // console.log(persondetails, address);
+
+        </script>
 </body>
 
 </html>

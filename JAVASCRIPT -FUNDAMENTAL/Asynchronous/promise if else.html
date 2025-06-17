@@ -5,66 +5,81 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-
 </head>
 
 <body>
-    <h2> promise </h2>
+    <h2>
+        Promise IF ELSE used
+    </h2>
+
 </body>
+
+
 <script>
+
     function hiring() {
         return new Promise((resolve, reject) => {
             setTimeout(() => {
                 const wallin = true;
                 if (wallin) {
-                    resolve(" This is our company hiring ")
+                    resolve("you are hired");
                 }
 
                 else {
-                    reject(" not hiring is company")
+                    reject("you are not hired");
                 }
             }, 3000)
-        })
+        });
     }
-
     function interviwe() {
         return new Promise((resolve, reject) => {
             setTimeout(() => {
-                const process = true;
-                if (process) {
-                    resolve(" Interviwe process an start")
-                }
-
-                else {
-                    reject(" This time not interviwe")
-                }
-            }, 2500)
-        })
-    }
-
-    function shortlist() {   
-        return new Promise((resolve, reject) => {
-            setTimeout(() => {
-                const role = false;
-
-                if (role) {
-                    resolve(" Our company your shortlist ")
+                const procee = true;
+                if (procee) {
+                    resolve("process is done");
                 }
                 else {
-                    reject(" Our Company not shortlist ")
+                    reject("process is not done");
                 }
             }, 2000)
         })
     }
 
+    function shortlist() {
+        return new Promise((resolve, reject) => {
+            setTimeout(() => {
+                const waiting = true;
+                if (waiting) {
+                    resolve("you are shorlisted");
+                }
+                else {
+                    reject("you are not shortlisted");
+                }
+            }, 1500);
+        })
+    }
+
     hiring().then(value => { console.log(value); return interviwe() })
         .then(value => { console.log(value); return shortlist() })
-        .then(value => { console.log(value); console.log("congralation your select in company ") })
+        .then(value => { console.log(value); console.log("you are suceess"); })
         .catch(error => console.error(error))
-        .finally(() => {
-            console.log(" this is select in company ")
+        .finally(" When did you join our company ")
 
-        })
+    // fetch("https://reqres.in/api/users?page=2")
+
+    //     .then(responce => {
+    //         if (responce.ok) {
+    //             return responce.json()
+    //         }
+    //     })
+    //     .then(msg => console.log(msg.data))
+    //     .catch (error=> console.error(error))
+
+
+
+
+
+
 
 
 </script>

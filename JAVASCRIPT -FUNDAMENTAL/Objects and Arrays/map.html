@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>map</title>
+</head>
+
+<body>
+    <h2>
+        Map
+    </h2>
+
+    <script>
+
+        // const employees = ['Bathish', ' Karthik', 'Barath', 'Uday', 'Gunasekar', 'Hari'];
+        // // const toupEmployees = employees.map(employee => employee.toLowerCase());
+        // // console.log(toupEmployees);
+
+
+        // const values = [];
+        // const productemployes = employees.forEach(employee => {
+        //     return values.push(employee.toLowerCase());
+        // });
+        // console.log(values);
+
+        //Create a array of objects 
+        const employees = [
+
+            { id: 1, name: 'sathish', age: 23, experience: 2, salary: 20000 },
+            { id: 2, name: 'karthik', age: 25, experience: 3, salary: 25000 },
+            { id: 3, name: 'barath', age: 27, experience: 4, salary: 30000 },
+            { id: 4, name: 'uday', age: 29, experience: 5, salary: 35000 },
+            { id: 5, name: 'gunasekar', age: 31, experience: 6, salary: 40000 },
+            { id: 6, name: 'hari', age: 33, experience: 7, salary: 45000 }
+
+        ];
+
+        const misalary = 30000;
+        const thirtylabove = employees.filter((employee )=> {
+            return employee.salary >= misalary;
+        })
+console.log(thirtylabove);
+
+
+
+
+
+        //  const employeesalary = employees.reduce((accumulater, employee) => {
+        //     return accumulater + employee.salary;
+
+        // }, 0);
+        // console.log(`total salary of all : ${employeesalary}`);
+
+    </script>
+</body>
+
+</html>

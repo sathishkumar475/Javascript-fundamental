@@ -1,37 +1,44 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Scope in JavaScript</title>
 </head>
+
 <body>
     <h1>Understanding Scope in JavaScript</h1>
     <script>
-        // Global Scope
-        let globalVar = "I am a global variable";
+        //Global scope 
+        //difine   A variable outside function 
 
-        function outerFunction() {
-            // Function Scope
-            let outerVar = "I am a variable in the outer function";
+        let Sayhollo = ' Hey iam sathish';
+        function greet() {
+            //console.log(Sayhollo);
 
-            function innerFunction() {
-                // Inner Function Scope
-                let innerVar = "I am a variable in the inner function";
+        }
+        greet();
+        console.log(Sayhollo);
+        ///function scope 
 
-                console.log(globalVar); // Accessible
-                console.log(outerVar);  // Accessible
-                console.log(innerVar);  // Accessible
-            }
+        function innerfunction() {
+            let notoutside = " This not printed out side ";
+            console.log(notoutside);
 
-            innerFunction();
+        }
+        innerfunction()
+        //  console.log(notoutside);  Error ! not outside printed.
 
-            // console.log(innerVar); // Unaccessible, will throw an error
+        // Blocl scope 
+
+        if (true) {
+            let blockscopr = " This not outside variable ";
+            console.log(blockscopr);
+
         }
 
-        outerFunction();
-
-        // console.log(outerVar); // Unaccessible, will throw an error
     </script>
 </body>
+
 </html>

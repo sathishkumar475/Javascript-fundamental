@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+
+    <script>
+        /// Basic structure of a closure
+        // function outerfunction() {
+        //     let screet = " Hey !  closer learning ";
+
+        //     return function innerfunction() {
+        //         console.log(screet);
+
+        //     }
+        // }
+        // let callouterfunction = outerfunction();
+        // callouterfunction();
+
+        ///Counter function     
+
+        // function createCounter() {
+        //     let count = 0;
+        //     return function () {
+        //         count++;
+        //         console.log(`count is a:  ${count}`);
+
+        //     };
+
+        // }
+
+        // const couting = createCounter();
+        // couting();
+        // couting();
+        // couting();
+
+        ///Creating a Private Bank Account
+
+        function bankAccount(initialBalance) {
+            let balance = initialBalance;
+
+            return {
+                deposit: function (amount) {
+                    balance += amount;
+                    console.log(`Deposited ${amount}. New balance: ${balance}`);
+                },
+                withdraw: function (amount) {
+                    if (amount <= balance) {
+                        balance -= amount;
+                        console.log(`Withdrew ${amount}. New balance ${balance}`);
+                    } else {
+                        console.log("Insufficient funds.");
+                    }
+                },
+                getBalance: function () {
+                    console.log(`Current balance: ${balance}`);
+                
+            }
+        };
+    }
+
+        const myAccount = bankAccount(1000);
+        myAccount.deposit(500); // Deposited 500. New balance: 1500
+        myAccount.withdraw(200); // Withdrew 200. New balance: 1300
+        myAccount.getBalance();  // Current balance: 1300
+
+    </script>
+</body>
+
+</html>

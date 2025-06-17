@@ -1,31 +1,42 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>querySelector Example</title>
 </head>
+
 <body>
-    <h1 id="title">Hello, World!</h1>
+    <!-- <h1 id="title">Hello, World!</h1>
     <p class="description">This is a paragraph.</p>
-    <p class="description">This is another paragraph.</p>
-    <button id="changeText">Change Text</button>
+    <p class="description">This is another paragraph.</p> -->
+    <!-- <button id="changeText">Change Text</button> -->
+    <button id="output">Click me</button>
 
     <script>
-        // Select the first element with the class "description"
-        const firstParagraph = document.querySelector('.description');
-        console.log(firstParagraph.textContent);
+        // // Select the first element with the class "description"
+        // const firstParagraph = document.querySelector('.description');
+        // console.log(firstParagraph.textContent);
 
-        // Select the element with the id "title"
-        const title = document.querySelector('#title');
-        console.log(title.textContent);
+        // // Select the element with the id "title"
+        // const title = document.querySelector('#title');
+        // console.log(title.textContent);
+        
+        // // Add an event listener to the button
+        // const button = document.querySelector('#changeText');
+        // button.addEventListener('click', () => {
+        //     title.textContent = "Text Changed!";
+        //     firstParagraph.textContent = "This paragraph has been updated.";
+        // });
 
-        // Add an event listener to the button
-        const button = document.querySelector('#changeText');
-        button.addEventListener('click', () => {
-            title.textContent = "Text Changed!";
-            firstParagraph.textContent = "This paragraph has been updated.";
+
+        const output = document.getElementById("output");
+        output.addEventListener("click", function () {
+            alert("Button clicked!");
         });
+
     </script>
 </body>
+
 </html>
