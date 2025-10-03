@@ -1,0 +1,65 @@
+-
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <img src="./lightoff.jpeg" alt="image" width="200px">
+    <button id="onBtn">ON</button>
+    <button id="offBtn">OFF</button>
+    <script>
+        let button1 = document.getElementById("onBtn");
+        let button2 = document.getElementById("offBtn");
+        let image = document.querySelector("img")
+
+        button1.onclick = function () {
+            image.src = "liighton.jpeg"
+        }
+
+        button2.onclick = function () {
+            image.src = "lightoff.jpeg"
+        }
+    </script>
+
+</html>
+
+
+<!-- <!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Light Bulb ON/OFF</title>
+</head>
+
+<body>
+   Initially light is off --> -->
+<!-- <img src="./liighton.jpeg" alt="Light Bulb" width="200">
+
+    <br><br>
+
+    <button id="onBtn">ON</button>
+    <button id="offBtn">OFF</button>
+
+    <script>
+        let button1 = document.getElementById("onBtn");
+        let button2 = document.getElementById("offBtn");
+        let image = document.querySelector("img");
+
+        button1.onclick = function () {
+            image.src = "lighton.jpg"; // bulb on
+        }
+
+        button2.onclick = function () {
+            image.src = "lightoff.jpg"; // bulb off
+        }
+    </script>
+</body>
+
+</html> -->

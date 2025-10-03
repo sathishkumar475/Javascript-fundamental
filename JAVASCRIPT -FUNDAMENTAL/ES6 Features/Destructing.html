@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <h1> Destructuring</h1>
+    <p>I own writing </p>
+
+
+</body>
+<script>
+
+    //Array of the destructuring 
+
+    const arr = [1, 2, 3, 4, 5, 6, 7, 8, 9];
+    const [first, second, third, ...four] = arr;
+
+
+    console.log(first, second, third, four);
+
+    //Object of the destructuring
+
+    const person = {
+        name: " Sathish",
+        role: " frontend developer",
+        experience: 1,
+        Skill: "HTML , CSS, JS,REACT JS "
+    }
+
+    // const { name, role } = person;
+    // console.log(name);
+
+
+    // function profile({ name, Skill }) {
+    //     return (
+    //         <h2> I'am {name} and my {Skill}</h2>
+    //     )
+    // }
+    // profile(person);
+</script>
+
+</html>

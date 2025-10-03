@@ -6,16 +6,67 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>addEventListener</title>
 </head>
+<style>
+    .container {
+        background-color: red;
+        width: 400px;
+        margin: auto;
+        padding: 20px;
+        box-shadow: 10px 10px 5px rgb(12, 4, 4);
+        margin-top: 25%;
+        border-radius: 20px;
+    }
+
+    input {
+        padding: 10px;
+        border-radius: 10px;
+        border: none;
+    }
+
+    button {
+        padding: 11px;
+        border-radius: 11px;
+        border: none;
+        background-color: blue;
+        color: white;
+        cursor: pointer;
+    }
+</style>
 
 <body>
-    <button id="output">click me </button>
-</body>
-<script>
+    <!-- <button id="output">click me </button> -->
+    <div class="container">
+        <input type="text" id="msg" placeholder="Type something...">
+        <button id="btn" onclick="manipulatingelement()">Click Me</button>
+        <ol>
+            <li>item-1</li>
+            <li>item-2</li>
+            <li>item-3</li>
+    </div>
+    </ol>
+    <script>
+        function manipulatingelement() {
+            let newlistElement = document.createElement("li")
+            // console.log(newlistElement);
 
-    const output = document.getElementById("output");
-    output.addEventListener("click", function () {
-        alert(" This is a button click variend")
-    })
-</script>
+            // newlistElement.innerText = "item4"
+            let input = document.querySelector("input");
+            // console.log(input.value);
+            newlistElement.innerText = input.value;
+            // console.log(newlistElement);
+
+            let orderlist = document.querySelector("ol")
+            // orderlist.append(" node ", newlistElement);
+            // orderlist.appendChild(newlistElement)
+            // orderlist.insertBefore(newlistElement, orderlist.children[0]);
+            // orderlist.replaceChild(newlistElement, orderlist.children[0]);
+            // orderlist.removeChild(orderlist.children[0])
+            // orderlist.remove();
+            newlistElement.style.color
+            orderlist.prepend("i'Sathish", newlistElement)
+
+        }
+
+    </script>
 
 </html>

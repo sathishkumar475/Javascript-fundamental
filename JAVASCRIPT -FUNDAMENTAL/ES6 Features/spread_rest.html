@@ -11,16 +11,16 @@
     <h1i id="output">Spread and Rest Operators in JavaScript</h1>
         <script>
             // Spread Operator Example
-            const breakfast = ["bread ", "egg", "milk "];
-            const lunch = ["rice ,dal", "salad"];
-            const dinner = ["sapththi ", "kuruma"]
-            const issummer = true;
-            const foods =
-                [...breakfast, "tea", ...lunch, ... (issummer ? [' watermelon '] : ['']), ...dinner]
-            console.log(foods);
+            // const breakfast = ["bread ", "egg", "milk "];
+            // const lunch = ["rice ,dal", "salad"];
+            // const dinner = ["sapththi ", "kuruma"]
+            // const issummer = true;
+            // const foods =
+            //     [...breakfast, "tea", ...lunch, ... (issummer ? [' watermelon '] : ['']), ...dinner]
+            // console.log(foods);
 
-            document.getElementById('output').innerHTML = foods;
-            // /// spread operator with object letteral
+            // document.getElementById('output').innerHTML = foods;
+            // // /// spread operator with object letteral
 
 
             // const person = {
@@ -28,14 +28,20 @@
             //     age: 23,
 
             // }
-            
+
             // const address = {
             //     city: "chennai",
             //     state: "tamilnadu",
             // }
-            // const persondetails = { ...person, ...address, age: 25, }
+            // const persondetails = { ...person, ...address, age: 25, team: " team design" }
             // console.log(persondetails, address);
 
+
+            function par(a, b, ...arr) {
+                console.log(a,b,arr);
+
+            }
+            par(1, 2, 3, 4, 5)
         </script>
 </body>
 

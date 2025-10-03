@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>calculator </title>
+    <style>
+        .calculator {
+            width: 30vw;
+            height: 70vh;
+            border: 1px solid rgb(189, 169, 169);
+            margin: auto;
+            position: relative;
+            top: 100px;
+            display: grid;
+            gap: 5px;
+            padding: 20px;
+        }
+
+        .calculator>.form-gruop {
+            display: flex;
+            justify-content: space-between;
+            gap: 5px;
+        }
+
+        .calculator>.form-gruop>button {
+            width: 25%;
+            font-size: 20px;
+            border: none;
+            border-radius: 8px;
+        }
+
+        .calculator>.form-gruop>button:hover {
+            background-color: rgb(148, 137, 137);
+        }
+
+        .calculator>.form-gruop>input {
+            width: 100%;
+            font-size: 30px;
+            border: 1px solid rgb(202, 150, 150);
+            text-align: end;
+            outline: none;
+            border-radius: 5px;
+            padding-right: 10px;
+
+        }
+
+        .calculator>.form-gruop>.evalute {
+            background-color: blue;
+            color: whitesmoke;
+            font-size: 30px;
+            border-radius: 5px;
+
+        }
+
+        .calculator>.form-gruop>.evalute:hover {
+            background-color: rgb(111, 111, 215);
+        }
+    </style>
+
+</head>
+
+<body>
+    <form class="calculator">
+        <div class="form-gruop">
+            <input type="text">
+        </div>
+        <div class="form-gruop">
+            <button type="button" onclick="addvalue('%')">%</button>
+            <button type="button" onclick="clearvalue()">C</button>
+            <button type="button" onclick="deletecharactor()">DEL</button>
+            <button type="button" onclick="addvalue('/')">/</button>
+        </div>
+        <div class="form-gruop">
+            <button type="button" onclick="addvalue('1')">1</button>
+            <button type="button" onclick="addvalue('2')">2</button>
+            <button type="button" onclick="addvalue('3')">3</button>
+            <button type="button" onclick="addvalue('+')">+</button>
+        </div>
+        <div class="form-gruop">
+            <button type="button" onclick="addvalue('4')">4</button>
+            <button type="button" onclick="addvalue('5')">5</button>
+            <button type="button" onclick="addvalue('6')">6</button>
+            <button type="button" onclick="addvalue('-')">-</button>
+        </div>
+        <div class="form-gruop">
+            <button type="button" onclick="addvalue('7')">7</button>
+            <button type="button" onclick="addvalue('8')">8</button>
+            <button type="button" onclick="addvalue('9')">9</button>
+            <button type="button" onclick="addvalue('*')">*</button>
+        </div>
+        <div class="form-gruop">
+            <button type="button" onclick="addvalue('00')">00</button>
+            <button type="button" onclick="addvalue('0')">0</button>
+            <button type="button" onclick="addvalue('.')">.</button>
+            <button type="button" class="evalute" onclick="evalutevalue()">=</button>
+        </div>
+    </form>
+</body>
+
+<script>
+
+    let input = document.querySelector("input")
+    function addvalue(elementvalue) {
+        input.value += elementvalue;
+    }
+
+    function clearvalue() {
+        input.value = "";
+    };
+    function deletecharactor() {
+        input.value = input.value.slice(0, input.value.length - 1)
+    }
+    function evalutevalue() {
+        input.value = eval(input.value)
+    }
+</script>
+
+</html>

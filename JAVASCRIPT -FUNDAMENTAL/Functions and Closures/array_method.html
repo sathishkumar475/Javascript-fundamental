@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Array</title>
+</head>
+
+<body>
+    <h2>Array method</h2>
+</body>
+<script>
+    const arr = ["Sathish ", "Kumar", "Prabhu ", "Mani"];
+    console.log(" Un shift , shift , push , pop method in array ");
+    arr.unshift("hello")  /// Unshift method add the element at the starting of the array
+    console.log(arr);
+    arr.shift();   /// Shift method remove the element at the starting of the array
+    console.log(arr);
+    arr.push(" I am web developer");  // Push method add the element at the end of the array
+    console.log(arr);
+    arr.pop();// Pop method remove the element at the end of the array
+    console.log(arr);
+
+    
+    const fruits = ["Apple", "Banana", "Mango", "Orange"];
+    fruits.splice(2, 1, "Grapes", "Papaya"); // Remove 1 item at index 2, add 2 items
+    console.log(fruits); // ["Apple", "Banana", "Grapes", "Papaya", "Orange"]
+
+
+</script>
+
+</html>

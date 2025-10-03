@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+
+</head>
+<style>
+    .conatiner {
+        background-color: rgb(223, 233, 203);
+        margin: auto;
+        padding: 20px;
+        width: 400px;
+        margin-top: 18%;
+        border-radius: 10px;
+    }
+
+    button {
+        padding: 5px;
+        /* padding-right: 5px; */
+        padding-top: 20px;
+        border-radius: 8px;
+        width: 100px;
+        text-align: center;
+        column-gap: 10px;
+        background-color: blueviolet;
+        color: aliceblue;
+        border: none;
+        box-shadow: 3px 3px 5px blue;
+        cursor: pointer;
+        margin: 15px;
+        /* gap: 15px; */
+    }
+</style>
+
+<body>
+    <div class="conatiner">
+        <!-- <img src="./restart.jpg" alt="restart.jpg"> -->
+        <img src="" alt="">
+        <p>Who's this </p>
+        <button id="listener">Listener </button>
+        <button id="handler">Handler</button>
+    </div>
+
+</body>
+<script>
+    let button1 = document.getElementById("listener");
+    let button2 = document.getElementById("handler");
+    let image = document.querySelector("img");
+
+    button1.addEventListener("click", function () {
+        // alert(" Hey Welcome to ")
+        image.src = "restart3.png"
+
+
+    })
+    // button1.addEventListener("click", function () {
+    //     alert(" I am sathish ")
+    // })
+    // button1.addEventListener("click", function () {
+    //     alert("Can you some help me ")
+    // })
+
+    // button2.onclick = function () {
+    //     alert("hey im ");
+    // }
+    // button2.onclick = function () {
+    //     alert("welsome");
+    // }
+    // button2.onclick = function () {
+    //     alert("thank you")
+    // }
+
+    // let image = document.querySelector("img");
+    // let pera = document.querySelector("p")
+    // image.addEventListener("mouseover", function () {
+    //     image.src = "restart2.jpg.png"
+    //     pera.innerText = "I am sathish "
+    // })
+    // image.addEventListener("mouseout", function () {
+    //     image.src = "restart3.png"
+    //     pera.innerText = "yes !!! "
+    // })
+
+
+
+</script>
+
+</html>

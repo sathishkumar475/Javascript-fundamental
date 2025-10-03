@@ -38,20 +38,16 @@
         ];
 
         const misalary = 30000;
-        const thirtylabove = employees.filter((employee )=> {
+        const thirtylabove = employees.filter((employee) => {
             return employee.salary >= misalary;
         })
-console.log(thirtylabove);
+        console.log(thirtylabove);
 
+        const employeesalary = employees.reduce((accumulater, employee) => {
+            return accumulater + employee.salary;
 
-
-
-
-        //  const employeesalary = employees.reduce((accumulater, employee) => {
-        //     return accumulater + employee.salary;
-
-        // }, 0);
-        // console.log(`total salary of all : ${employeesalary}`);
+        }, 0);
+        console.log(`total salary of all : ${employeesalary}`);
 
     </script>
 </body>
